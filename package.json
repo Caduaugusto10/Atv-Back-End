@@ -1,0 +1,20 @@
+{
+  "name": "filmes-back-end",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Carlos Eduardo",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "cords": "^1.0.4",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "uuid": "^11.0.5"
+  }
+}
