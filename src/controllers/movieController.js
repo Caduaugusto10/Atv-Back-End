@@ -1,14 +1,9 @@
-const Movie = require("../models/Movie");
-const MovieList = require("../models/MovieList");
+const Movie = require('../models/Movie');
+const MovieList = require('../models/MovieList'); // Certifique-se de importar o MovieList
 
-const lista = new MovieList();
+const lista = new MovieList(); // Instancie o MovieList
 
-const filme1 = new Movie("Carros 3", "Jonathon E. Stewart", "1h:43m", "Animação");
-lista.addMovie(filme1);
-
-lista.addMovie(new Movie("Tá Dando Onda", "Christian Darren", "1h:25m", "Animação"));
-
-const router = {
+const movieController = {
     addMovie: (req, res) => {
         try {
             const { title, author, duration, genre } = req.body;
@@ -20,7 +15,7 @@ const router = {
             res.status(200).json({ message: "Criado com sucesso", filme });
         } catch (error) {
             res.status(400).json({
-                message: "Erro ao criar música",
+                message: "Erro ao criar filme",
                 error: error.message,
             });
         }
@@ -28,8 +23,8 @@ const router = {
 
     getAllMovies: (req, res) => {
         try {
-            const songs = lista.getAllMovies();
-            res.status(200).json(songs);
+            const filmes = lista.getAllMovies();
+            res.status(200).json(filmes);
         } catch (error) {
             res.status(404).json({
                 message: "Erro ao buscar filmes",
@@ -67,7 +62,7 @@ const router = {
             lista.deleteMovie(movie);
             res.status(200).json({
                 message: "Filme deletado com sucesso",
-                song,
+                movie,
             });
         } catch (error) {
             res.status(404).json({
@@ -76,18 +71,6 @@ const router = {
             });
         }
     },
-
-    getTop10Songs: (req, res) => {
-        try {
-            const movies = lista.getTop10Songs();
-            res.status(200).json(songs);
-        } catch (error) {
-            res.status(404).json({
-                message: "Erro ao buscar Top10",
-                error: error.message,
-            });
-        }
-    },
 };
 
-module.exports = router;
+module.exports = movieController;
