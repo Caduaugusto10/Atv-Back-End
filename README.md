@@ -9,8 +9,8 @@ O diagrama de classes do projeto está disponível na pasta `public`. Você pode
 O XML está logo abaixo:
 
 <Movie>
-    <title>Indiana Jones e a Última Cruzada</title>
-    <author>Steven Spielberg</author>
-    <duration>127</duration>
-    <genre>Aventura</genre>
+    <title>Deadpool</title>
+    <author>Rob Liefeld</author>
+    <duration>1h 48m</duration>
+    <genre>Ação</genre>
 </Movie>
