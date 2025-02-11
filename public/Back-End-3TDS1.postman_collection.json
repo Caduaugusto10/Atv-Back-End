@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "d3d5b5fe-d45d-468c-a986-d8b702f22672",
+		"name": "Back-End-3TDS1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37231864"
+	},
+	"item": [
+		{
+			"name": "GET MOVIES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID MOVIES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/movies/105ac9d0-a2c0-4b33-bc6e-7f6f52463f95",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"105ac9d0-a2c0-4b33-bc6e-7f6f52463f95"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST MOVIES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Toy Story\",\r\n    \"author\": \"John Lasseter\",\r\n    \"duration\": 81,\r\n    \"genre\": \"Animação\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT MOVIES",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Toy Story\",\r\n    \"author\": \"Cadu\",\r\n    \"duration\": 81,\r\n    \"genre\": \"Animation\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/0f147724-be75-448b-b90e-d829370c48a9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"0f147724-be75-448b-b90e-d829370c48a9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MOVIES",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/1a0c689f-1277-4fb4-a616-ab9eaf4d1b5c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"1a0c689f-1277-4fb4-a616-ab9eaf4d1b5c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MovieById-XML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n<Movie>\r\n    <title>Indiana Jones e a Última Cruzada</title>\r\n    <author>Steven Spielberg</author>\r\n    <duration>127</duration>\r\n    <genre>Aventura</genre>\r\n</Movie>",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
